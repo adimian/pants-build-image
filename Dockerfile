@@ -9,3 +9,5 @@ RUN ./get-docker.sh
 
 RUN curl --proto '=https' --tlsv1.2 -fOsSL https://static.pantsbuild.org/setup/get-pants.sh && \
     bash ./get-pants.sh --bin-dir /usr/local/bin
+RUN SCIE_BOOT=update pants
+RUN pip install awscli
